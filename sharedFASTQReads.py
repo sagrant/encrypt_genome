@@ -23,8 +23,6 @@ class readCount():
     '''
     Input: FASTQ file 
     Returns: CSV file with each read and # times read appears in FASTQ
-    Returns: plot where X = number of people read was found in, and 
-    Y = number of times a repeated read was found in X people 
     '''
 
     def __init__(self, FASTQ):
@@ -35,21 +33,16 @@ class readCount():
         Input: merged FASTQ file 
         Output: Dataframe with each read and count of each read 
         '''
-        readDf = pd.DataFrame(self.dfList).rename(columns = {0: 'id', 1: 'sequence'})
-        #seqs = readDf.iloc[:,1]
-        # dups = seqs.duplicated()  DUPS ARE PRESENT
-        # counter = 0
-        # for d in dups: 
-        #     if d == True:
-        #         print(d)
-        #         break
-        #gb = readDf.groupby('sequence').agg({'sequence': 'nunique'})#.reset_index()
-        gb = readDf.groupby(['id', 'sequence'])['sequence'].count() #NEXT TRY SIZE AND COUNT /SEE IF THERE ARE DUPS BETWEEN SAMPLES
-        # print(readDf)
-        #gb = readDf.value_counts(subset=['id', 'sequence'], sort = False)
-        print(gb)  
-        print(max(gb))
-        return gb
+        readDf = pd.DataFrame(self.dfList).rename(columns = {0: 'ID', 1: 'Sequence'})
+        gb = readDf.groupby('ID')
+        counts = []
+        for name, group in gb: 
+            noDups = group.drop_duplicates(subset = ['Sequence', 'ID'], keep = 'first')
+            counts.append(noDups)
+            
+        countReads = pd.concat(counts)
+        vCounts = countReads.value_counts(subset = 'Sequence')
+        return vCounts
 
 def main():
 
@@ -58,7 +51,7 @@ def main():
         splitID1 = id.partition('.')[0].rstrip()
         dfList.append([splitID1, seq])
 
-    for id, seq, qual in pyfastx.Fastq(args.file2, build_index = False): #OMIT TO SAVE TIME DO NOT FORGET TO UNCOMMENT LATER 
+    for id, seq, qual in pyfastx.Fastq(args.file2, build_index = False): 
         splitID2 = id.partition('.')[0].rstrip()
         dfList.append([splitID2, seq])
 
