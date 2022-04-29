@@ -28,7 +28,6 @@ class countContigs():
         self.contigDf['People'] == samples
 
         gb = self.contigDf.groupby('Contig', as_index= True).nunique()
-        gb.to_csv(args.outFile, index = False)
         return gb
     
 
