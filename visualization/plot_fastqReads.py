@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib
 import matplotlib.pyplot as plt
 
-inFile = 'shared_reads.csv'
+inFile = '/home/sagrant/encrypt_genome/data/shared_reads.csv'
 
 with open(inFile, 'r') as file: 
     df = pd.read_csv(file, usecols = [0], squeeze = True, engine = 'c')
