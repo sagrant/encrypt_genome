@@ -52,8 +52,8 @@ def main():
     groups = reads.callReads()
 
     #write raw values to CSV file 
-    with open(args.output, 'w') as test: 
-        groups.to_csv(test, index = False)
+    with open('/home/sagrant/encrypt_genome/data/shared_reads.csv', 'w') as sharedOut: 
+        groups.to_csv(sharedOut, index = False)
 
 
 if __name__ == "__main__":
