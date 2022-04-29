@@ -14,7 +14,6 @@ parser = argparse.ArgumentParser()
 
 parser.add_argument('-fq1', '--file1') #concatenated forward FASTQ
 parser.add_argument('-fq2', '--file2') #concatenated reverse FASTQ
-parser.add_argument('-o', '--output') #csv with reads, counts of each read
 
 args = parser.parse_args()
 
