@@ -4,7 +4,7 @@ import itertools
 import numpy as np
 
 '''
-Input: any amount of paired-end FASTQ files
+Input: paired-end FASTQ files
 Output: FASTQ files subsampled to 300,000,000 reads'''
 
 parser = argparse.ArgumentParser()
