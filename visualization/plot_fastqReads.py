@@ -12,7 +12,6 @@ inFile = '/home/sagrant/encrypt_genome/data/shared_reads.csv'
 with open(inFile, 'r') as file: 
     df = pd.read_csv(file, usecols = [0], squeeze = True, engine = 'c')
 
-print(df)
 data = df.values
 fig, ax = plt.subplots()
 plt.hist(data, bins = 20, color = 'black', log = True, zorder = 20)
