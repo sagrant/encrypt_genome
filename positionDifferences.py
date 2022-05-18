@@ -67,7 +67,7 @@ def main():
 
     diffDf = pd.DataFrame([diffOut1, diffOut2, diffOut3, diffOut4, diffOut5, diffOut6, diffOut7, diffOut8]).T
     
-    with open('/home/sagrant/encrypt_genome/data/vcf_PosDistances.csv', 'w') as distanceOut: 
+    with open('/home/sagrant/encrypt_genome/data/position_diff.csv', 'w') as distanceOut: 
         diffDf.to_csv(distanceOut, index = False)
 
 if __name__ == "__main__":
