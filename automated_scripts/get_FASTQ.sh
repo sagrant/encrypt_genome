@@ -39,5 +39,3 @@ wget --output-document sample8_2.fastq.gz $FASTQ8_2
 
 gunzip *.gz
 
-
-
