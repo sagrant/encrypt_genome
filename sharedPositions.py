@@ -102,7 +102,7 @@ def main():
     sharedPosDf = pd.DataFrame.from_dict(valDict, orient = 'index').rename(columns = {0: 'Shared Positions', 1: 'Unique Positions'})
     print(sharedPosDf)
 
-    with open('/home/sagrant/encrypt_genome/shared_postions.csv', 'w') as outFile: 
+    with open('/home/sagrant/encrypt_genome/shared_positions.csv', 'w') as outFile: 
         sharedPosDf.to_csv(outFile, index = False)
 
 if __name__ == "__main__":
