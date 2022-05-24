@@ -34,8 +34,7 @@ class plotUnique():
 
 
 def main():
-    # with open('/home/sagrant/encrypt_genome/data/unique_positions.csv', 'r') as inFile:
-    with open('unique_positions.csv', 'r') as inFile:
+    with open('/home/sagrant/encrypt_genome/data/unique_positions.csv', 'r') as inFile:
         df = pd.read_csv(inFile)
 
     Unique = plotUnique(df)
