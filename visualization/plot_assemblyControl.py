@@ -34,7 +34,6 @@ class plotControl():
 
 def main():
     inFile = '/home/sagrant/encrypt_genome/data/assembly_control.csv'
-    #inFile = 'assembly_control.csv'
 
     with open(inFile, 'r') as file:
         df = pd.read_csv(file)
