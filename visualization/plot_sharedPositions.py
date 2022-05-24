@@ -17,6 +17,7 @@ class plotPositions():
 
     def graph(self):
         vals = self.posDf.iloc[:,0].values
+        print(vals)
         fig, ax = plt.subplots()
         plt.hist(vals, log= True, bins = 15, color = 'black', zorder = 20)
         ax.set_ylabel('Positions (#)')
@@ -26,12 +27,12 @@ class plotPositions():
         plt.show()
 
 def main():
-    #inFile = '/home/sagrant/encrypt_genome/data/shared_positions.csv'
-    inFile = 'shared_positions.csv'
+    inFile = '/home/sagrant/encrypt_genome/data/shared_positions.csv'
+    #inFile = 'shared_positions.csv'
 
     with open(inFile, 'r') as file: 
         df = pd.read_csv(file)
-
+    
     plotPos = plotPositions(df)
     plotPositions.graph(plotPos)
 
