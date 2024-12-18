@@ -100,7 +100,6 @@ def main():
         'Sample5': [val5, len(ind5)], 'Sample6': [val6, len(ind6)], 'Sample7': [val7, len(ind7)], 'Sample8': [val8, len(ind8)]}
 
     sharedPosDf = pd.DataFrame.from_dict(valDict, orient = 'index').rename(columns = {0: 'Shared Positions', 1: 'Unique Positions'})
-    print(sharedPosDf)
 
     with open('/home/sagrant/encrypt_genome/shared_positions.csv', 'w') as outFile: 
         sharedPosDf.to_csv(outFile, index = False)
