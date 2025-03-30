@@ -8,7 +8,7 @@ With this protocol, we encrypt DNA from multiple individuals. Genomic DNA is fra
 
 To support this method, I conducted a bioinformatics thought experiment to establish that the pool of fragmented DNA cannot be pieced back together. The aim was to see if it would be possible to assemble a person's genome if it were subsampled and mixed with genomic DNA of several individuals. This workflow mimics the wet lab workflow that was developed in parallel. See the flowchart below for a description of the entire workflow.
 
-![dna_encryption_flowchart](https://github.com/user-attachments/assets/080e415c-64dd-444f-8cb1-d131eaa851c3)
+![dna_encryption_flowchart](https://github.com/user-attachments/assets/62d640b3-7b27-4421-8eb6-37192de2c3c8)
 
 Description of steps:
 ⋅1. Subsample FASTQ. Start the workflow by downloading several publically available human genomes obtained with Whole Genome Sequencing (WGS). This python script subsamples these files to 300,000,000 reads. This step is repeated 8 times with 8 different FASTQ files.
