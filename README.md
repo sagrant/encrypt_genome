@@ -1,6 +1,6 @@
 # encrypt_genome
 
-As high throughput genomic sequencing has exploded in popularity, many labs using third party sequencing companies leave their data vulnerable to exploitation. Computational encryption has been proposed in the past, but no method has resolved this issue yet [^1]. Our goal is to create a cheap and easy protocol where this data can be encrypted on a molecular level. 
+As high throughput genomic sequencing has exploded in popularity, many labs using third party sequencing companies leave their data vulnerable to exploitation. Computational encryption has been proposed in the past, but no method has resolved this issue yet[^1]. Our goal is to create a cheap and easy protocol where this data can be encrypted on a molecular level.
 
 With this protocol, we encrypt DNA from multiple individuals. Genomic DNA is fragmented and pooled, sequenced on the HiSeq Illumina platform, and each read is indexed with a unique barcode. The pooled DNA  cannot be linked to any specific individual. A separate whitelist is built from the identifying barcodes, and this serves as a key to decrypt the genomic pool. This whitelist can be sequenced cheaply on the MiSeq Illumina platform. The pooled DNA and the whitelist are split between parties, preventing either agency from taking advantage of sensitive genomic information. 
 
@@ -29,4 +29,4 @@ Description of steps:
 
 
 CITATIONS
-[1^]: Grishin, Dennis, Kamal Obbad, and George M. Church. “Data Privacy in the Age of Personal Genomics.” Nature Biotechnology 37, no. 10 (October 2019): 1115–17. https://doi.org/10.1038/s41587-019-0271-3.
+[^1]: Grishin, Dennis, Kamal Obbad, and George M. Church. “Data Privacy in the Age of Personal Genomics.” Nature Biotechnology 37, no. 10 (October 2019): 1115–17. https://doi.org/10.1038/s41587-019-0271-3.
