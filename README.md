@@ -8,7 +8,7 @@ With this protocol, we encrypt DNA from multiple individuals. Genomic DNA is fra
 
 To support this method, I conducted a bioinformatics thought experiment to establish that the pool of fragmented DNA cannot be pieced back together. The aim was to see if it would be possible to assemble a person's genome if it were subsampled and mixed with genomic DNA of several individuals. This workflow mimics the wet lab workflow that was developed in parallel. See the flowchart below for a description of the entire workflow.
 
-![dna_encryption_flowchart](https://github.com/user-attachments/assets/62d640b3-7b27-4421-8eb6-37192de2c3c8)
+![dna_encryption_flowchart](https://github.com/user-attachments/assets/9eda2407-c303-4d2c-b643-4b3f58946a9e)
 
 Description of steps:
 
